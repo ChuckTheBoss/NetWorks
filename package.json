@@ -16,7 +16,7 @@
     "MERN"
   ],
   "author": "ChuckTheBoss",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "express": "^4.18.2",
     "node": "^20.2.0",
