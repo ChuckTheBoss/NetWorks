@@ -1,5 +1,5 @@
 {
-  "name": "networking-app",
+  "name": "NetWorks",
   "version": "0.1.0",
   "description": "An app to find a job through real people",
   "main": "index.js",
@@ -19,6 +19,8 @@
   "license": "MIT",
   "dependencies": {
     "express": "^4.18.2",
+    "mongodb": "^5.5.0",
+    "mongoose": "^7.2.1",
     "node": "^20.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
