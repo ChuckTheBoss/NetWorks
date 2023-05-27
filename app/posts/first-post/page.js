@@ -7,9 +7,9 @@ import { Dropdown } from "flowbite-react";
 export default function FirstPost() {
   return (
     <>
-      <div className="h-full flex justify-center items-center">
+      <div className="flex flex-grow flex-col justify-center items-center">
         <div class="overflow-x-auto shadow-md sm:rounded-lg">
-          <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
+          <table class="contacts w-full text-sm text-left text-gray-500 dark:text-gray-400">
             <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
               <tr>
                 <th scope="col" class="px-6 py-3">

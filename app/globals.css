@@ -21,6 +21,8 @@ html, body, #app, #app>div {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   min-height: 100dvh;
   color: rgb(var(--foreground-rgb));
   background: linear-gradient(
@@ -30,4 +32,8 @@ body {
     )
     rgb(var(--background-start-rgb));
     
+}
+
+.contacts {
+  min-width: 75vw;
 }
