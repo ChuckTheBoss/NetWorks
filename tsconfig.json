@@ -115,7 +115,7 @@
     ".next/types/**/*.ts",
     "**/*.ts",
     "**/*.tsx"
-, "app/layout.js", "app/posts/first-post/page.js", "app/page.js"  ],
+, "app/layout.js", "app/contact-list/page.js", "app/page.js"  ],
   "exclude": [
     "node_modules"
   ]

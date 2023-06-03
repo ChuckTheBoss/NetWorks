@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <h2>
-        <Link href="/posts/first-post">To First Page</Link>
+        <Link href="/contact-list">To Contact List/Main functionality Page</Link>
       </h2>
     </>
   );
