@@ -1,31 +1,29 @@
 {
-  "name": "networks",
+  "name": "networking-app",
   "version": "0.1.0",
-  "private": true,
+  "description": "An app to find a job through real people",
+  "main": "index.js",
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "build-css": "npx tailwindcss -i ./app/globals.css -o ./public/styles.css --watch",
-    "start": "next start",
-    "lint": "next lint"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
   },
+  "keywords": [
+    "project",
+    "network",
+    "networking",
+    "web",
+    "app",
+    "MERN"
+  ],
+  "author": "ChuckTheBoss",
+  "license": "ISC",
   "dependencies": {
-    "@types/jest": "^29.5.1",
-    "@types/node": "^20.2.4",
-    "@types/react": "^18.2.7",
-    "@types/react-dom": "^18.2.4",
-    "eslint": "8.41.0",
-    "eslint-config-next": "13.4.4",
-    "flowbite": "^1.6.5",
-    "flowbite-react": "^0.4.4",
-    "next": "13.4.4",
-    "react": "18.2.0",
-    "react-dom": "18.2.0",
-    "typescript": "^5.0.4"
+    "express": "^4.18.2",
+    "node": "^20.2.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.23",
-    "tailwindcss": "^3.3.2"
+    "nodemon": "^2.0.22"
   }
 }
