@@ -1,11 +1,12 @@
 const mongoose = require('mongoose')
+require('dotenv').config();
+
 
 const connectDB = async () => {
     try {
         const conn = await mongoose.connect(process.env.MONGO_CONNECT, {
             useNewUrlParser: true,
             useUnifiedTopology: true,
-            useFindAndModify: false,
         })
 
         console.log(`MongoDB Connected: ${conn.connection.host}`)
@@ -15,4 +16,4 @@ const connectDB = async () => {
     }
 }
 
-module.exports = connectDB;
+module.exports = connectDB();
