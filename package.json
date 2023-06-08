@@ -1,5 +1,5 @@
 {
-  "name": "NetWorks",
+  "name": "networks",
   "version": "0.1.0",
   "description": "An app to find a job through real people",
   "main": "index.js",
@@ -18,6 +18,8 @@
   "author": "ChuckTheBoss",
   "license": "MIT",
   "dependencies": {
+    "dotenv": "^16.1.4",
+    "ejs": "^3.1.9",
     "express": "^4.18.2",
     "mongodb": "^5.5.0",
     "mongoose": "^7.2.1",
