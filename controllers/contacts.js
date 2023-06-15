@@ -1,4 +1,4 @@
-const Contacts = require('../models/contact');
+const Contact = require('../models/contact');
 
 module.exports = {
     createContact: async (req, res) => {
@@ -9,7 +9,7 @@ module.exports = {
                 email: req.body.email,
             })
             console.log('Contact has been added!')
-            res.redirect('/contact')
+            //res.redirect('/contact')
         } catch (err) {
             console.error(err)
         }
