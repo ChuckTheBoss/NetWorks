@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>NetWorks -- Contacts</title>
+</head>
+<body>
+    <h1>New Contact</h1>
+        <form action="/contacts/create" method="POST">
+            <input type="text" placeholder="First Name" name="firstName">
+            <input type="text" placeholder="Last Name" name="lastName">
+            <input type="email" placeholder="email" name="email">
+            <input type="text" placeholder="Event met at" name="eventMetAt">
+            <input type="date" placeholder="Date met" name="dateMet">
+            <input type="text" placeholder="Company" name="company">
+            <input type="text" placeholder="Position" name="positionAtCompany">
+            <input type="text" placeholder="Common interests" name="spark">
+            <input type="text" placeholder="LinkedIn" name="linkedIn">
+            <input type="text" placeholder="twitter" name="twitter">
+            <input type="submit">
+        </form>
+    <div id="root"></div>
+<script src="js/index.js"></script>
+</body>
+</html>
