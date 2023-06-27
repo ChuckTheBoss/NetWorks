@@ -16,6 +16,39 @@
             </li>
     <% }) %>  
     </ul>
+    <table>
+        <tr>
+            <th>Date Added</th>
+            <th>Company Name</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Progress</th>
+            <th>Follow Up</th>
+        </tr>
+        <% contacts.forEach( contact => { %>
+            <tr class="contactList">
+                <td >
+                    <%=contact.dateAdded%>
+                </td>
+                <td >
+                    <%=contact.company%>
+                </td>
+                <td >
+                    <%=contact.firstName%> <%=contact.lastName%>
+                </td>
+                <td >
+                    <%=contact.email%>
+                </td>
+                <td>
+                    progress bar
+                </td>
+                <td >
+                    follow up
+                </td>
+                <%=contact%>
+            </tr>
+    <% }) %>  
+    </table>
     <div id="root"></div>
 <script src="js/index.js"></script>
 </body>

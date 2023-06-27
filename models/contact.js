@@ -31,7 +31,8 @@ const ContactSchema = new mongoose.Schema({
     },
     twitter: {
         type: String
-    }
+    },
+    dateAdded: { type: Date, default: Date.now }
 })
 
 module.exports = mongoose.model('Contact', ContactSchema)

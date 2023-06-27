@@ -16,6 +16,13 @@ module.exports = {
                 firstName: req.body.firstName,
                 lastName: req.body.lastName,
                 email: req.body.email,
+                eventMetAt: req.body.eventMetAt,
+                dateMet: req.body.dateMet,
+                company: req.body.company,
+                positionAtCompany: req.body.positionAtCompany,
+                spark: req.body.spark,
+                linkedIn: req.body.linkedIn,
+                twitter: req.body.twitter
             })
             console.log('Contact has been added!')
             res.redirect('/contacts')
@@ -23,4 +30,7 @@ module.exports = {
             console.error(err)
         }
     },
+    getCreateContact: (req, res) => {
+        res.render('createContact.ejs')
+    }
 }
