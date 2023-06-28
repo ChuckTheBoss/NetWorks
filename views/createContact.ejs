@@ -4,42 +4,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>NetWorks -- Contacts</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">NetWorks</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <a class="navbar-brand" href="/">NetWorks</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#contactsNavbar" aria-controls="contactsNavbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse" id="contactsNavbar">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="./contacts">Contacts</a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Contacts
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/contacts">Contact list</a></li>
+                  <li><a class="dropdown-item" href="/contacts/create">Create new contact </a></li>
+                </ul>
               </li>
             </ul>
           </div>
         </div>
     </nav>
     <h1>New Contact</h1>
-        <form action="/contacts/create" method="POST">
-            
-            <input type="text" placeholder="First Name" name="firstName">
-            <input type="text" placeholder="Last Name" name="lastName">
-            <input type="email" placeholder="email" name="email">
-            <input type="text" placeholder="Event met at" name="eventMetAt">
-            <input type="date" placeholder="Date met" name="dateMet">
-            <input type="text" placeholder="Company" name="company">
-            <input type="text" placeholder="Position" name="positionAtCompany">
-            <input type="text" placeholder="Common interests" name="spark">
-            <input type="text" placeholder="LinkedIn" name="linkedIn">
-            <input type="text" placeholder="twitter" name="twitter">
-            <input type="submit">
+        <form action="/contacts/create" method="POST" >
+            <div class="mb-3">
+                <label for="newContactFirstName" class="form-label">First name</label>
+                <input type="text" placeholder="Charlie" name="firstName" id="newContactFirstName" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="newContactLastName" class="form-label">Last name</label>
+                <input type="text" placeholder="Bucket" name="lastName" id="newContactLastName" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="newContactEmail" class="form-label">Email</label>
+                <input type="email" placeholder="favorite@grandpaJoe.com" name="email" id="newContactEmail" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="newContactEventMetAt" class="form-label">Event met at</label>
+                <input type="text" placeholder="Golden ticket sweepstakes" name="eventMetAt" id="newContactEventMetAt" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="newContactDateMet" class="form-label">Date met</label>
+                <input type="date" name="dateMet" id="newContactDateMet" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="newContactCompany" class="form-label">Company</label>
+                <input type="text" placeholder="Wonka INC." name="company" id="newContactCompany" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="newContactPositionAtCompany" class="form-label">Position</label>
+                <input type="text" placeholder="Owner" name="positionAtCompany" id="newContactPositionAtCompany" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="newContactSpark" class="form-label">Common interests</label>
+                <input type="text" placeholder="We talked about chocolate for a while and he said he'd give me a discount!" name="spark" id="newContactSpark" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="newContactLinkedIn" class="form-label">LinkedIn</label>
+                <input type="text" placeholder="linkedIn.com/CharlieBucket" name="linkedIn" id="newContactLinkedIn" class="form-control">
+            </div>
+            <div class="mb-3">
+                <label for="newContactTwitter" class="form-label">Twitter</label>
+                <input type="text" placeholder="@theGobStopper" name="twitter" id="newContactTwitter" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit </button>
         </form>
     <div id="root"></div>
-<script src="js/index.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
+<script src="../js/index.js"></script>
 </body>
 </html>

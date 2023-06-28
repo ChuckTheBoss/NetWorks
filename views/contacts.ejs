@@ -4,27 +4,33 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
     <title>NetWorks -- Contacts</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">NetWorks</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <a class="navbar-brand" href="/">NetWorks</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#contactsNavbar" aria-controls="contactsNavbar" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <div class="collapse navbar-collapse" id="contactsNavbar">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="./contacts">Contacts</a>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Contacts
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="/contacts">Contact list</a></li>
+                  <li><a class="dropdown-item" href="/contacts/create">Create new contact </a></li>
+                </ul>
               </li>
             </ul>
           </div>
         </div>
     </nav>
-    <h3><a href="./contacts/create">Create new contact</a></h3>
+    <h3><a href="/contacts/create">Create new contact</a></h3>
     <table class="table table-hover table-striped">
         <thead>
             <tr>
@@ -38,15 +44,15 @@
         </thead>
        <tbody>
         <% contacts.forEach( contact => { %>
-            <tr class="contactList">
+            <tr class="contactList"> 
                 <td >
-                    <%=contact.dateAdded%>
+                    <%=contact.dateAdded.toDateString()%>
                 </td>
                 <td >
                     <%=contact.company%>
                 </td>
                 <td >
-                    <%=contact.firstName%> <%=contact.lastName%>
+                    <a href="/contacts/contact/<%=contact._id%>"><%=contact.firstName%> <%=contact.lastName%> </a>
                 </td>
                 <td >
                     <%=contact.email%>
@@ -63,6 +69,7 @@
         
     </table>
     <div id="root"></div>
+    <script src="js/bootstrap.bundle.min.js"></script>
 <script src="js/index.js"></script>
 </body>
 </html>

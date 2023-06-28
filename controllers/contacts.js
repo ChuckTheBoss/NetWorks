@@ -32,5 +32,13 @@ module.exports = {
     },
     getCreateContact: (req, res) => {
         res.render('createContact.ejs')
+    },
+    getContactByid: async (req, res) => {
+        try {
+            const contact = await Contact.findById(req.params.id)
+            res.render('contact.ejs', { contact: contact })
+        } catch (err) {
+            console.log(err)
+        }
     }
 }
