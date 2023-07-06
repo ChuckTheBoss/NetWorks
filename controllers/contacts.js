@@ -40,5 +40,15 @@ module.exports = {
         } catch (err) {
             console.log(err)
         }
-    }
+    },
+    deleteContact: async (req, res) => {
+        console.log("body id" + req.body.contactIdFromJSFile)
+        try {
+            await Contact.findOneAndDelete({ _id: req.body.contactIdFromJSFile })
+            console.log('Contact has been deleted!')
+            res.send('contact deleted!')
+        } catch (err) {
+            console.log(err)
+        }
+    },
 }

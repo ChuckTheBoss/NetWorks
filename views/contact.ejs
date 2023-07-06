@@ -31,11 +31,20 @@
         </div>
     </nav>
     <h3><a href="/contacts/create">Create new contact</a></h3>
+    
+    <ul>
+      <li >
+        <p class="singleContactID"><%=contact._id%></p>
+        <p class="singleContact" data-id='<%=contact._id%>'><%=contact%></p>
+        <button id="eraseContact">ERASE</button>
+      </li>
+    </ul>
 
-                  <%= contact %>
+      
+
 
     <div id="root"></div>
     <script src="../../js/bootstrap.bundle.min.js"></script>
-<script src="../../js/index.js"></script>
+<script src="/js/index.js"></script>
 </body>
 </html>
