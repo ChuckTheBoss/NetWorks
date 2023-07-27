@@ -10,7 +10,7 @@ const homeRoutes = require('./routes/home')
 const contactRoutes = require("./routes/contacts")
 const authRoutes = require("./routes/auth")
 const PORT = process.env.PORT || 3000;
-require("/config/passport")(passport)
+require("./config/passport")(passport);
 connectDB();
 
 app.set('view engine', 'ejs')
@@ -29,7 +29,7 @@ app.use(
 app.use(session({
     secret: 'peter pan',
     resave: false,
-    saveUninitialized: true,
+    saveUninitialized: false,
 }))
 
 app.use(passport.initialize())
